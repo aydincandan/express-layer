@@ -1,9 +1,10 @@
-## express-layer
+# express-layer
+daha kolay bir express kullanımı
 easier express usage
 
 
 
-# Kullanım
+## Kullanım
 Bunu projenize dahil etmek için aşağıdakileri yapın.
 
 ```
@@ -24,7 +25,7 @@ server.on('listening', () => {
 [express-layer](https://github.com/aydincandan/express-layer/pulls) için önerileriniz dikkate alınacaktır.
 
 
-# Usage
+## Usage
 To include it in your project, do the following.
 
 ```
