@@ -21,7 +21,7 @@ server.on('listening', () => {
 });
 ```
 
-[js-comments-eraser](https://github.com/aydincandan/express-layer/pulls) için önerileriniz dikkate alınacaktır.
+[express-layer](https://github.com/aydincandan/express-layer/pulls) için önerileriniz dikkate alınacaktır.
 
 
 # Usage
@@ -42,4 +42,4 @@ server.on('listening', () => {
 });
 ```
 
-Your suggestions for [js-comments-eraser](https://github.com/aydincandan/express-layer/pulls) will be taken into consideration.
+Your suggestions for [express-layer](https://github.com/aydincandan/express-layer/pulls) will be taken into consideration.
