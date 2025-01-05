@@ -1,12 +1,20 @@
 {
   "name": "express-layer",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "main": "index.js",
   "scripts": {
     "serve": "node index"
   },
   "keywords": [],
-  "author": "",
+  "author": "Aydin Candan <aydincandan@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aydincandan/express-layer.git"
+  },
+  "bugs": {
+    "url": "https://github.com/aydincandan/express-layer/issues"
+  },
+  "homepage": "https://github.com/aydincandan/express-layer#readme",
   "license": "ISC",
   "description": "a quick start for express",
   "dependencies": {
