@@ -41,12 +41,12 @@ const expresslayer = (params) => {
 
         const { port, kaynak } = require('portgetset')// öncelikle .env den gelen PORT=, yoksa commandline: 0 < port
 
-        const startPort = myport ? myport  // myport varsa myport geçerli
+        const currentPort = myport ? myport  // myport varsa myport geçerli
                 :
                 // aksi durumda diğer koşullar geçerli..
                 ((port === undefined || port == 0) ? 7001 : port) // (hiçyoksa veya commandline:0) ise 7001 den başlayan (tryAvailablePort) sonraki boş olan bir port olacak.
 
-        console.log({ startPort })
+        console.log({ currentPort })
 
         if (true) {
                 const net = require('net');
@@ -80,12 +80,12 @@ const expresslayer = (params) => {
                         // veya // ***
                         // app.listen(availablePort, () => { infoDisplay(availablePort) }) // ***
                 }
-                tryAvailablePort(startPort, tryCallBack);
+                tryAvailablePort(currentPort, tryCallBack);
 
         } else {
-                server.listen(startPort, () => { infoDisplay(startPort) }) // ***
+                server.listen(currentPort, () => { infoDisplay(currentPort) }) // ***
                 // veya // ***
-                // app.listen(startPort, () => { infoDisplay(startPort) }) // ***
+                // app.listen(currentPort, () => { infoDisplay(currentPort) }) // ***
         }
 
         const cookieParser = require('cookie-parser');
@@ -101,7 +101,7 @@ const expresslayer = (params) => {
         }
 
         // module.exports = { express, app, server, port, catchallroute };
-        return { express, app, server, port, catchallroute }
+        return { express, app, server, port:currentPort, catchallroute }
 }
         ;
 module.exports = expresslayer
