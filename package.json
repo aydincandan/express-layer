@@ -1,6 +1,6 @@
 {
   "name": "express-layer",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "main": "index.js",
   "scripts": {
     "serve": "node index"
@@ -18,7 +18,6 @@
   "license": "ISC",
   "description": "a quick start for express",
   "dependencies": {
-    "cookie-parser": "^1.4.7",
     "express": "^4.21.2",
     "portgetset": "^1.0.3"
   }

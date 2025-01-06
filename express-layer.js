@@ -1,8 +1,8 @@
 'use strict';
 
 const expresslayer = (params) => {
-        const { myport, aciklama = "", filename = "default.txt" } = params || {};
-
+        const { myport, aciklama = "", filename = "your__filename.js" } = params || {};
+        const { version } = require('./package.json');
         const express = require('express');
         const app = express();
 
@@ -23,18 +23,17 @@ const expresslayer = (params) => {
         const infoDisplay = (port) => {
                 console.log()
                 console.log()
-                console.log(">>>>>> express-layer <<<<<<<<<")
+                console.log(">>>>>> express-layer ("+version+") <<<<<<<<<")
                 console.log("*************************************************************");
                 console.log("*", aciklama, "node version " + process.version);
                 console.log("*", filename);
                 console.log("*");
-                console.log("*", "http://localhost:" + port + "/kukiler");
-                console.log("*");
-                console.log("*", new Date().toLocaleString());
+                // console.log("*", "http://localhost:" + port + "/kukiler");
+                // console.log("*");
+                // console.log("*", new Date().toLocaleString());
                 console.log("*");
                 console.log("*", `Worker ${process.pid} is running on port`, port);
                 console.log("*************************************************************");
-                console.log(">>>>>> express-layer <<<<<<<<<")
                 console.log()
                 console.log()
         }
@@ -88,11 +87,11 @@ const expresslayer = (params) => {
                 // app.listen(currentPort, () => { infoDisplay(currentPort) }) // ***
         }
 
-        const cookieParser = require('cookie-parser');
-        app.use(cookieParser());
-        app.get('/kukiler', cookieParser(), (req, res) => {
-                res.status(200).json({ kukiler: req.cookies })
-        });
+        // const cookieParser = require('cookie-parser');
+        // app.use(cookieParser());
+        // app.get('/kukiler', cookieParser(), (req, res) => {
+        //         res.status(200).json({ kukiler: req.cookies })
+        // });
 
         const catchallroute = (req, res) => {
                 const warn = `${req.method}, tipinde kodlanmamis bir istekte bulundunuz, from SERVER ${req.url}`;
@@ -101,7 +100,7 @@ const expresslayer = (params) => {
         }
 
         // module.exports = { express, app, server, port, catchallroute };
-        return { express, app, server, port:currentPort, catchallroute }
+        return { express, app, server, port: currentPort, catchallroute }
 }
         ;
 module.exports = expresslayer
