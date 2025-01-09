@@ -1,7 +1,7 @@
 'use strict';
 
 const expresslayer = (params) => {
-        const { myport, aciklama = "", filename = "your__filename.js" } = params || {};
+        const { myport, info_desc = "", filename = "your__filename.js" } = params || {};
         const { version } = require('./package.json');
         const express = require('express');
         const app = express();
@@ -12,7 +12,7 @@ const expresslayer = (params) => {
         server.maxHeaderSize = 75 * 1024 * 1024; // İstenilen başlık boyutu sınırı (75 MB)
         server.on('listening', () => {
 
-                const SERVERLISTENINFO = "SERVER http://localhost:" + port + " üzerinde ** " + aciklama + "(express-layer) ** BAŞLADI."
+                const SERVERLISTENINFO = "SERVER http://localhost:" + port + " üzerinde ** " + info_desc + "(express-layer) ** BAŞLADI."
                 app.set('port', port);
                 app.set('LISTENINFO', SERVERLISTENINFO)
 
@@ -25,7 +25,7 @@ const expresslayer = (params) => {
                 console.log()
                 console.log(">>>>>> express-layer ("+version+") <<<<<<<<<")
                 console.log("*************************************************************");
-                console.log("*", aciklama, "node version " + process.version);
+                console.log("*", info_desc, "node version " + process.version);
                 console.log("*", filename);
                 console.log("*");
                 // console.log("*", "http://localhost:" + port + "/kukiler");

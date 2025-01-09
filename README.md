@@ -1,3 +1,7 @@
+# last version change 1.0.5
+.parametre({ filename: __filename, info_desc: 'may be any info', myport: 4321 }) // That's all for now about parametric possibilities.
+
+
 # express-layer
 daha kolay bir express kullanımı
 
