@@ -3,6 +3,7 @@
   "version": "1.0.6",
   "main": "index.js",
   "scripts": {
+    "update-outdated-packages": "npx npm-check-updates -u && npm install",
     "serve": "node index"
   },
   "keywords": [],
@@ -18,7 +19,7 @@
   "license": "ISC",
   "description": "a quick start for express",
   "dependencies": {
-    "express": "^4.21.2",
-    "portgetset": "^1.0.3"
+    "express": "^5.2.1",
+    "portgetset": "^1.0.4"
   }
 }
